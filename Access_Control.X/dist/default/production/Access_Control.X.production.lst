@@ -1,0 +1,1465 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.36 build -262312587 
+                                                                                               Fri Nov 08 11:23:43 2024
+
+Microchip Technology Omniscient Code Generator v1.36 (Free mode) build 201601150325
+     1                           	processor	16F876A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataBANK0,global,class=CODE,delta=2
+     5                           	psect	strings,global,class=STRING,delta=2
+     6                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     7                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     9                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    10                           	psect	maintext,global,class=CODE,split=1,delta=2
+    11                           	psect	text1,local,class=CODE,merge=1,delta=2
+    12                           	psect	text2,local,class=CODE,merge=1,delta=2
+    13                           	psect	text3,local,class=CODE,merge=1,delta=2
+    14                           	psect	text4,local,class=CODE,merge=1,delta=2
+    15                           	psect	text5,local,class=CODE,merge=1,delta=2
+    16                           	psect	text6,local,class=CODE,merge=1,delta=2
+    17                           	psect	text7,local,class=CODE,merge=1,delta=2
+    18                           	psect	text8,local,class=CODE,merge=1,delta=2
+    19                           	psect	text9,local,class=CODE,merge=1,delta=2
+    20                           	dabs	1,0x7E,2
+    21  0000                     	;# 
+    22  0001                     	;# 
+    23  0002                     	;# 
+    24  0003                     	;# 
+    25  0004                     	;# 
+    26  0005                     	;# 
+    27  0006                     	;# 
+    28  0007                     	;# 
+    29  000A                     	;# 
+    30  000B                     	;# 
+    31  000C                     	;# 
+    32  000D                     	;# 
+    33  000E                     	;# 
+    34  000E                     	;# 
+    35  000F                     	;# 
+    36  0010                     	;# 
+    37  0011                     	;# 
+    38  0012                     	;# 
+    39  0013                     	;# 
+    40  0014                     	;# 
+    41  0015                     	;# 
+    42  0015                     	;# 
+    43  0016                     	;# 
+    44  0017                     	;# 
+    45  0018                     	;# 
+    46  0019                     	;# 
+    47  001A                     	;# 
+    48  001B                     	;# 
+    49  001B                     	;# 
+    50  001C                     	;# 
+    51  001D                     	;# 
+    52  001E                     	;# 
+    53  001F                     	;# 
+    54  0081                     	;# 
+    55  0085                     	;# 
+    56  0086                     	;# 
+    57  0087                     	;# 
+    58  008C                     	;# 
+    59  008D                     	;# 
+    60  008E                     	;# 
+    61  0091                     	;# 
+    62  0092                     	;# 
+    63  0093                     	;# 
+    64  0094                     	;# 
+    65  0098                     	;# 
+    66  0099                     	;# 
+    67  009C                     	;# 
+    68  009D                     	;# 
+    69  009E                     	;# 
+    70  009F                     	;# 
+    71  010C                     	;# 
+    72  010D                     	;# 
+    73  010E                     	;# 
+    74  010F                     	;# 
+    75  018C                     	;# 
+    76  018D                     	;# 
+    77                           
+    78                           	psect	idataBANK0
+    79  062C                     __pidataBANK0:	
+    80                           
+    81                           ;initializer for main@F1092
+    82  062C  3468               	retlw	104
+    83  062D  3465               	retlw	101
+    84  062E  346C               	retlw	108
+    85  062F  346C               	retlw	108
+    86  0630  346F               	retlw	111
+    87  0631  3400               	retlw	0
+    88  0006                     _PORTB	set	6
+    89  0007                     _PORTC	set	7
+    90  001A                     _RCREG	set	26
+    91  0018                     _RCSTA	set	24
+    92  0030                     _RB0	set	48
+    93  0031                     _RB1	set	49
+    94  0032                     _RB2	set	50
+    95  0038                     _RC0	set	56
+    96  0039                     _RC1	set	57
+    97  003A                     _RC2	set	58
+    98  0065                     _RCIF	set	101
+    99  0099                     _SPBRG	set	153
+   100  0086                     _TRISB	set	134
+   101  0087                     _TRISC	set	135
+   102  0098                     _TXSTA	set	152
+   103                           
+   104                           	psect	strings
+   105  0003                     __pstrings:	
+   106  0003                     stringtab:	
+   107  0003                     __stringtab:	
+   108  0003                     stringcode:	
+   109                           ;	String table - string pointers are 1 byte each
+   110                           
+   111  0003                     stringdir:	
+   112  0003  3000               	movlw	high stringdir
+   113  0004  008A               	movwf	10
+   114  0005  0804               	movf	4,w
+   115  0006  0A84               	incf	4,f
+   116  0007  0782               	addwf	2,f
+   117  0008                     __stringbase:	
+   118  0008  3400               	retlw	0
+   119  0009                     __end_of__stringtab:	
+   120  0009                     STR_3:	
+   121  0009  3453               	retlw	83	;'S'
+   122  000A  3468               	retlw	104	;'h'
+   123  000B  346F               	retlw	111	;'o'
+   124  000C  3477               	retlw	119	;'w'
+   125  000D  3420               	retlw	32	;' '
+   126  000E  3454               	retlw	84	;'T'
+   127  000F  3461               	retlw	97	;'a'
+   128  0010  3467               	retlw	103	;'g'
+   129  0011  343A               	retlw	58	;':'
+   130  0012  3400               	retlw	0
+   131  0013                     STR_1:	
+   132  0013  3447               	retlw	71	;'G'
+   133  0014  3472               	retlw	114	;'r'
+   134  0015  3461               	retlw	97	;'a'
+   135  0016  346E               	retlw	110	;'n'
+   136  0017  3474               	retlw	116	;'t'
+   137  0018  3465               	retlw	101	;'e'
+   138  0019  3464               	retlw	100	;'d'
+   139  001A  3421               	retlw	33	;'!'
+   140  001B  3400               	retlw	0
+   141  001C                     STR_2:	
+   142  001C  3444               	retlw	68	;'D'
+   143  001D  3465               	retlw	101	;'e'
+   144  001E  346E               	retlw	110	;'n'
+   145  001F  3469               	retlw	105	;'i'
+   146  0020  3465               	retlw	101	;'e'
+   147  0021  3464               	retlw	100	;'d'
+   148  0022  342E               	retlw	46	;'.'
+   149  0023  342E               	retlw	46	;'.'
+   150  0024  3400               	retlw	0
+   151                           
+   152                           ; #config settings
+   153  0000                     
+   154                           	psect	cinit
+   155  07DA                     start_initialization:	
+   156  07DA                     __initialization:	
+   157                           
+   158                           ; Initialize objects allocated to BANK0
+   159  07DA  120A  118A  262C  120A  118A  	fcall	__pidataBANK0	;fetch initializer
+   160  07DF  00BA               	movwf	__pdataBANK0& (0+127)
+   161  07E0  120A  118A  262D  120A  118A  	fcall	__pidataBANK0+1	;fetch initializer
+   162  07E5  00BB               	movwf	(__pdataBANK0+1)& (0+127)
+   163  07E6  120A  118A  262E  120A  118A  	fcall	__pidataBANK0+2	;fetch initializer
+   164  07EB  00BC               	movwf	(__pdataBANK0+2)& (0+127)
+   165  07EC  120A  118A  262F  120A  118A  	fcall	__pidataBANK0+3	;fetch initializer
+   166  07F1  00BD               	movwf	(__pdataBANK0+3)& (0+127)
+   167  07F2  120A  118A  2630  120A  118A  	fcall	__pidataBANK0+4	;fetch initializer
+   168  07F7  00BE               	movwf	(__pdataBANK0+4)& (0+127)
+   169  07F8  120A  118A  2631   	fcall	__pidataBANK0+5	;fetch initializer
+   170  07FB  00BF               	movwf	(__pdataBANK0+5)& (0+127)
+   171  07FC                     end_of_initialization:	
+   172                           ;End of C runtime variable initialization code
+   173                           
+   174  07FC                     __end_of__initialization:	
+   175  07FC  0183               	clrf	3
+   176  07FD  120A  118A  2F77   	ljmp	_main	;jump to C main() function
+   177                           
+   178                           	psect	dataBANK0
+   179  003A                     __pdataBANK0:	
+   180  003A                     main@F1092:	
+   181  003A                     	ds	6
+   182                           
+   183                           	psect	cstackCOMMON
+   184  0070                     __pcstackCOMMON:	
+   185  0070                     ?_serialInit:	
+   186  0070                     ??_serialInit:	
+   187                           ; 1 bytes @ 0x0
+   188                           
+   189  0070                     ?_serialRead:	
+   190                           ; 1 bytes @ 0x0
+   191                           
+   192  0070                     ??_serialRead:	
+   193                           ; 1 bytes @ 0x0
+   194                           
+   195  0070                     ?_command:	
+   196                           ; 1 bytes @ 0x0
+   197                           
+   198  0070                     ??_command:	
+   199                           ; 1 bytes @ 0x0
+   200                           
+   201  0070                     ?_data:	
+   202                           ; 1 bytes @ 0x0
+   203                           
+   204  0070                     ??_data:	
+   205                           ; 1 bytes @ 0x0
+   206                           
+   207  0070                     ?_LCD_Print:	
+   208                           ; 1 bytes @ 0x0
+   209                           
+   210  0070                     ?_LCD_Init:	
+   211                           ; 1 bytes @ 0x0
+   212                           
+   213  0070                     ?_accessGranted:	
+   214                           ; 1 bytes @ 0x0
+   215                           
+   216  0070                     ?_accessDenied:	
+   217                           ; 1 bytes @ 0x0
+   218                           
+   219  0070                     ?_strcmp:	
+   220                           ; 1 bytes @ 0x0
+   221                           
+   222  0070                     ?_main:	
+   223                           ; 2 bytes @ 0x0
+   224                           
+   225  0070                     strcmp@s2:	
+   226                           ; 2 bytes @ 0x0
+   227                           
+   228                           
+   229                           ; 1 bytes @ 0x0
+   230  0070                     	ds	2
+   231  0072                     ??_strcmp:	
+   232  0072                     command@cmd:	
+   233                           ; 1 bytes @ 0x2
+   234                           
+   235  0072                     data@ch:	
+   236                           ; 1 bytes @ 0x2
+   237                           
+   238  0072                     serialRead@i:	
+   239                           ; 1 bytes @ 0x2
+   240                           
+   241                           
+   242                           ; 2 bytes @ 0x2
+   243  0072                     	ds	1
+   244  0073                     ??_LCD_Print:	
+   245  0073                     ??_LCD_Init:	
+   246                           ; 1 bytes @ 0x3
+   247                           
+   248                           
+   249                           ; 1 bytes @ 0x3
+   250  0073                     	ds	1
+   251  0074                     serialRead@str:	
+   252  0074                     LCD_Print@str:	
+   253                           ; 1 bytes @ 0x4
+   254                           
+   255  0074                     strcmp@r:	
+   256                           ; 1 bytes @ 0x4
+   257                           
+   258                           
+   259                           ; 1 bytes @ 0x4
+   260  0074                     	ds	1
+   261  0075                     ??_accessGranted:	
+   262  0075                     ??_accessDenied:	
+   263                           ; 1 bytes @ 0x5
+   264                           
+   265  0075                     strcmp@s1:	
+   266                           ; 1 bytes @ 0x5
+   267                           
+   268                           
+   269                           ; 1 bytes @ 0x5
+   270  0075                     	ds	3
+   271  0078                     ??_main:	
+   272                           
+   273                           ; 1 bytes @ 0x8
+   274  0078                     	ds	3
+   275                           
+   276                           	psect	cstackBANK0
+   277  0020                     __pcstackBANK0:	
+   278  0020                     main@UID_In:	
+   279                           
+   280                           ; 20 bytes @ 0x0
+   281  0020                     	ds	20
+   282  0034                     main@UID:	
+   283                           
+   284                           ; 6 bytes @ 0x14
+   285  0034                     	ds	6
+   286                           
+   287                           	psect	maintext
+   288  0777                     __pmaintext:	
+   289 ;;
+   290 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   291 ;;
+   292 ;; *************** function _main *****************
+   293 ;; Defined at:
+   294 ;;		line 41 in file "main.c"
+   295 ;; Parameters:    Size  Location     Type
+   296 ;;		None
+   297 ;; Auto vars:     Size  Location     Type
+   298 ;;  UID_In         20    0[BANK0 ] unsigned char [20]
+   299 ;;  UID             6   20[BANK0 ] unsigned char [6]
+   300 ;; Return value:  Size  Location     Type
+   301 ;;                  2   71[None  ] int 
+   302 ;; Registers used:
+   303 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   304 ;; Tracked objects:
+   305 ;;		On entry : B00/0
+   306 ;;		On exit  : 0/0
+   307 ;;		Unchanged: 0/0
+   308 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   309 ;;      Params:         0       0       0       0       0
+   310 ;;      Locals:         0      26       0       0       0
+   311 ;;      Temps:          3       0       0       0       0
+   312 ;;      Totals:         3      26       0       0       0
+   313 ;;Total ram usage:       29 bytes
+   314 ;; Hardware stack levels required when called:    3
+   315 ;; This function calls:
+   316 ;;		_LCD_Init
+   317 ;;		_LCD_Print
+   318 ;;		_accessDenied
+   319 ;;		_accessGranted
+   320 ;;		_command
+   321 ;;		_serialInit
+   322 ;;		_serialRead
+   323 ;;		_strcmp
+   324 ;; This function is called by:
+   325 ;;		Startup code after reset
+   326 ;; This function uses a non-reentrant model
+   327 ;;
+   328                           
+   329                           
+   330                           ;psect for function _main
+   331  0777                     _main:	
+   332                           
+   333                           ;main.c: 42: char UID[] = "hello";
+   334                           
+   335                           ;incstack = 0
+   336                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   337  0777  3034               	movlw	main@UID& (0+255)
+   338  0778  0084               	movwf	4
+   339  0779  1283               	bcf	3,5	;RP0=0, select bank0
+   340  077A  1303               	bcf	3,6	;RP1=0, select bank0
+   341  077B  083A               	movf	main@F1092,w
+   342  077C  1383               	bcf	3,7	;select IRP bank0
+   343  077D  0080               	movwf	0
+   344  077E  0A84               	incf	4,f
+   345  077F  083B               	movf	main@F1092+1,w
+   346  0780  0080               	movwf	0
+   347  0781  0A84               	incf	4,f
+   348  0782  083C               	movf	main@F1092+2,w
+   349  0783  0080               	movwf	0
+   350  0784  0A84               	incf	4,f
+   351  0785  083D               	movf	main@F1092+3,w
+   352  0786  0080               	movwf	0
+   353  0787  0A84               	incf	4,f
+   354  0788  083E               	movf	main@F1092+4,w
+   355  0789  0080               	movwf	0
+   356  078A  0A84               	incf	4,f
+   357  078B  083F               	movf	main@F1092+5,w
+   358  078C  0080               	movwf	0
+   359                           
+   360                           ;main.c: 43: char UID_In[20];
+   361                           ;main.c: 44: serialInit();
+   362  078D  120A  118A  2632  120A  118A  	fcall	_serialInit
+   363                           
+   364                           ;main.c: 45: LCD_Init();
+   365  0792  120A  118A  26A0  120A  118A  	fcall	_LCD_Init
+   366  0797                     l839:	
+   367                           ;main.c: 47: while(1) {
+   368                           
+   369                           
+   370                           ;main.c: 48: command(0x80);
+   371  0797  3080               	movlw	128
+   372  0798  120A  118A  26E8  120A  118A  	fcall	_command
+   373                           
+   374                           ;main.c: 49: LCD_Print("Show Tag:");
+   375  079D  3001               	movlw	(low ((STR_3-__stringbase)| (0+32768)))& (0+255)
+   376  079E  120A  118A  2646  120A  118A  	fcall	_LCD_Print
+   377                           
+   378                           ;main.c: 50: serialRead(UID_In);
+   379  07A3  3020               	movlw	(low (main@UID_In| 0))& (0+255)
+   380  07A4  120A  118A  2746  120A  118A  	fcall	_serialRead
+   381                           
+   382                           ;main.c: 52: if(!strcmp(UID, UID_In)) {
+   383  07A9  3020               	movlw	(low (main@UID_In| 0))& (0+255)
+   384  07AA  00F8               	movwf	??_main
+   385  07AB  0878               	movf	??_main,w
+   386  07AC  00F0               	movwf	strcmp@s2
+   387  07AD  3034               	movlw	(low (main@UID| 0))& (0+255)
+   388  07AE  120A  118A  26C3  120A  118A  	fcall	_strcmp
+   389  07B3  0870               	movf	?_strcmp,w
+   390  07B4  0471               	iorwf	?_strcmp+1,w
+   391  07B5  1D03               	btfss	3,2
+   392  07B6  2FBD               	goto	l849
+   393                           
+   394                           ;main.c: 53: accessGranted();
+   395  07B7  120A  118A  2662  120A  118A  	fcall	_accessGranted
+   396                           
+   397                           ;main.c: 54: }
+   398  07BC  2FC2               	goto	l851
+   399  07BD                     l849:	
+   400                           
+   401                           ;main.c: 55: else {
+   402                           ;main.c: 56: accessDenied();
+   403  07BD  120A  118A  267E  120A  118A  	fcall	_accessDenied
+   404  07C2                     l851:	
+   405                           
+   406                           ;main.c: 57: }
+   407                           ;main.c: 58: _delay((unsigned long)((1000)*(4e6/4000.0)));
+   408  07C2  3006               	movlw	6
+   409  07C3  00FA               	movwf	??_main+2
+   410  07C4  3013               	movlw	19
+   411  07C5  00F9               	movwf	??_main+1
+   412  07C6  30B1               	movlw	177
+   413  07C7  00F8               	movwf	??_main
+   414  07C8                     u197:	
+   415  07C8  0BF8               	decfsz	??_main,f
+   416  07C9  2FC8               	goto	u197
+   417  07CA  0BF9               	decfsz	??_main+1,f
+   418  07CB  2FC8               	goto	u197
+   419  07CC  0BFA               	decfsz	??_main+2,f
+   420  07CD  2FC8               	goto	u197
+   421  07CE  2FCF               	nop2
+   422                           
+   423                           ;main.c: 59: command(0x01);
+   424  07CF  3001               	movlw	1
+   425  07D0  120A  118A  26E8  120A  118A  	fcall	_command
+   426                           
+   427                           ;main.c: 60: RC0 = 0;
+   428  07D5  1283               	bcf	3,5	;RP0=0, select bank0
+   429  07D6  1303               	bcf	3,6	;RP1=0, select bank0
+   430  07D7  1007               	bcf	7,0	;volatile
+   431                           
+   432                           ;main.c: 61: RC1 = 0;
+   433  07D8  1087               	bcf	7,1	;volatile
+   434  07D9  2F97               	goto	l839
+   435  07DA                     __end_of_main:	
+   436                           
+   437                           	psect	text1
+   438  06C3                     __ptext1:	
+   439 ;; *************** function _strcmp *****************
+   440 ;; Defined at:
+   441 ;;		line 33 in file "C:\Program Files (x86)\Microchip\xc8\v1.36\sources\common\strcmp.c"
+   442 ;; Parameters:    Size  Location     Type
+   443 ;;  s1              1    wreg     PTR const unsigned char 
+   444 ;;		 -> main@UID(6), 
+   445 ;;  s2              1    0[COMMON] PTR const unsigned char 
+   446 ;;		 -> main@UID_In(20), 
+   447 ;; Auto vars:     Size  Location     Type
+   448 ;;  s1              1    5[COMMON] PTR const unsigned char 
+   449 ;;		 -> main@UID(6), 
+   450 ;;  r               1    4[COMMON] char 
+   451 ;; Return value:  Size  Location     Type
+   452 ;;                  2    0[COMMON] int 
+   453 ;; Registers used:
+   454 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   455 ;; Tracked objects:
+   456 ;;		On entry : 0/0
+   457 ;;		On exit  : 0/0
+   458 ;;		Unchanged: 0/0
+   459 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   460 ;;      Params:         2       0       0       0       0
+   461 ;;      Locals:         2       0       0       0       0
+   462 ;;      Temps:          2       0       0       0       0
+   463 ;;      Totals:         6       0       0       0       0
+   464 ;;Total ram usage:        6 bytes
+   465 ;; Hardware stack levels used:    1
+   466 ;; This function calls:
+   467 ;;		Nothing
+   468 ;; This function is called by:
+   469 ;;		_main
+   470 ;; This function uses a non-reentrant model
+   471 ;;
+   472                           
+   473                           
+   474                           ;psect for function _strcmp
+   475  06C3                     _strcmp:	
+   476                           
+   477                           ;incstack = 0
+   478                           ; Regs used in _strcmp: [wreg-fsr0h+status,2+status,0]
+   479                           ;strcmp@s1 stored from wreg
+   480  06C3  00F5               	movwf	strcmp@s1
+   481  06C4  2ECD               	goto	l825
+   482  06C5                     l821:	
+   483  06C5  3001               	movlw	1
+   484  06C6  00F2               	movwf	??_strcmp
+   485  06C7  0872               	movf	??_strcmp,w
+   486  06C8  07F5               	addwf	strcmp@s1,f
+   487  06C9  3001               	movlw	1
+   488  06CA  00F2               	movwf	??_strcmp
+   489  06CB  0872               	movf	??_strcmp,w
+   490  06CC  07F0               	addwf	strcmp@s2,f
+   491  06CD                     l825:	
+   492  06CD  0875               	movf	strcmp@s1,w
+   493  06CE  0084               	movwf	4
+   494  06CF  1383               	bcf	3,7	;select IRP bank0
+   495  06D0  0800               	movf	0,w
+   496  06D1  00F2               	movwf	??_strcmp
+   497  06D2  0870               	movf	strcmp@s2,w
+   498  06D3  0084               	movwf	4
+   499  06D4  0300               	decf	0,w
+   500  06D5  3AFF               	xorlw	255
+   501  06D6  0772               	addwf	??_strcmp,w
+   502  06D7  00F3               	movwf	??_strcmp+1
+   503  06D8  0873               	movf	??_strcmp+1,w
+   504  06D9  00F4               	movwf	strcmp@r
+   505  06DA  0874               	movf	strcmp@r,w
+   506  06DB  1D03               	btfss	3,2
+   507  06DC  2EE2               	goto	l829
+   508  06DD  0875               	movf	strcmp@s1,w
+   509  06DE  0084               	movwf	4
+   510  06DF  0800               	movf	0,w
+   511  06E0  1D03               	btfss	3,2
+   512  06E1  2EC5               	goto	l821
+   513  06E2                     l829:	
+   514  06E2  0874               	movf	strcmp@r,w
+   515  06E3  00F0               	movwf	?_strcmp
+   516  06E4  01F1               	clrf	?_strcmp+1
+   517  06E5  1BF0               	btfsc	?_strcmp,7
+   518  06E6  03F1               	decf	?_strcmp+1,f
+   519  06E7  0008               	return
+   520  06E8                     __end_of_strcmp:	
+   521                           
+   522                           	psect	text2
+   523  0746                     __ptext2:	
+   524 ;; *************** function _serialRead *****************
+   525 ;; Defined at:
+   526 ;;		line 9 in file "Serial.h"
+   527 ;; Parameters:    Size  Location     Type
+   528 ;;  str             1    wreg     PTR unsigned char 
+   529 ;;		 -> main@UID_In(20), 
+   530 ;; Auto vars:     Size  Location     Type
+   531 ;;  str             1    4[COMMON] PTR unsigned char 
+   532 ;;		 -> main@UID_In(20), 
+   533 ;;  i               2    2[COMMON] int 
+   534 ;; Return value:  Size  Location     Type
+   535 ;;                  1    wreg      void 
+   536 ;; Registers used:
+   537 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   538 ;; Tracked objects:
+   539 ;;		On entry : 0/0
+   540 ;;		On exit  : 0/0
+   541 ;;		Unchanged: 0/0
+   542 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   543 ;;      Params:         0       0       0       0       0
+   544 ;;      Locals:         3       0       0       0       0
+   545 ;;      Temps:          2       0       0       0       0
+   546 ;;      Totals:         5       0       0       0       0
+   547 ;;Total ram usage:        5 bytes
+   548 ;; Hardware stack levels used:    1
+   549 ;; This function calls:
+   550 ;;		Nothing
+   551 ;; This function is called by:
+   552 ;;		_main
+   553 ;; This function uses a non-reentrant model
+   554 ;;
+   555                           
+   556                           
+   557                           ;psect for function _serialRead
+   558  0746                     _serialRead:	
+   559                           
+   560                           ;incstack = 0
+   561                           ; Regs used in _serialRead: [wreg-fsr0h+status,2+status,0]
+   562                           ;serialRead@str stored from wreg
+   563  0746  00F4               	movwf	serialRead@str
+   564                           
+   565                           ;Serial.h: 10: int i;
+   566                           ;Serial.h: 11: for(i = 0; ; i++) {
+   567  0747  01F2               	clrf	serialRead@i
+   568  0748  01F3               	clrf	serialRead@i+1
+   569  0749                     l41:	
+   570                           ;Serial.h: 12: while(!RCIF);
+   571                           
+   572  0749  1283               	bcf	3,5	;RP0=0, select bank0
+   573  074A  1303               	bcf	3,6	;RP1=0, select bank0
+   574  074B  1E8C               	btfss	12,5	;volatile
+   575  074C  2F49               	goto	l41
+   576                           
+   577                           ;Serial.h: 13: str[i] = RCREG;
+   578  074D  081A               	movf	26,w	;volatile
+   579  074E  00F0               	movwf	??_serialRead
+   580  074F  0872               	movf	serialRead@i,w
+   581  0750  0774               	addwf	serialRead@str,w
+   582  0751  00F1               	movwf	??_serialRead+1
+   583  0752  0871               	movf	??_serialRead+1,w
+   584  0753  0084               	movwf	4
+   585  0754  0870               	movf	??_serialRead,w
+   586  0755  1383               	bcf	3,7	;select IRP bank0
+   587  0756  0080               	movwf	0
+   588                           
+   589                           ;Serial.h: 14: if(str[i] == '\r' || str[i] == '\n') {
+   590  0757  0872               	movf	serialRead@i,w
+   591  0758  0774               	addwf	serialRead@str,w
+   592  0759  00F0               	movwf	??_serialRead
+   593  075A  0870               	movf	??_serialRead,w
+   594  075B  0084               	movwf	4
+   595  075C  300D               	movlw	13
+   596  075D  0600               	xorwf	0,w
+   597  075E  1903               	btfsc	3,2
+   598  075F  2F69               	goto	l775
+   599  0760  0872               	movf	serialRead@i,w
+   600  0761  0774               	addwf	serialRead@str,w
+   601  0762  00F0               	movwf	??_serialRead
+   602  0763  0870               	movf	??_serialRead,w
+   603  0764  0084               	movwf	4
+   604  0765  300A               	movlw	10
+   605  0766  0600               	xorwf	0,w
+   606  0767  1D03               	btfss	3,2
+   607  0768  2F70               	goto	l777
+   608  0769                     l775:	
+   609                           
+   610                           ;Serial.h: 15: str[i] = '\0';
+   611  0769  0872               	movf	serialRead@i,w
+   612  076A  0774               	addwf	serialRead@str,w
+   613  076B  00F0               	movwf	??_serialRead
+   614  076C  0870               	movf	??_serialRead,w
+   615  076D  0084               	movwf	4
+   616  076E  0180               	clrf	0
+   617                           
+   618                           ;Serial.h: 16: break;
+   619  076F  0008               	return
+   620  0770                     l777:	
+   621  0770  3001               	movlw	1
+   622  0771  07F2               	addwf	serialRead@i,f
+   623  0772  1803               	skipnc
+   624  0773  0AF3               	incf	serialRead@i+1,f
+   625  0774  3000               	movlw	0
+   626  0775  07F3               	addwf	serialRead@i+1,f
+   627  0776  2F49               	goto	l41
+   628  0777                     __end_of_serialRead:	
+   629                           
+   630                           	psect	text3
+   631  0632                     __ptext3:	
+   632 ;; *************** function _serialInit *****************
+   633 ;; Defined at:
+   634 ;;		line 1 in file "Serial.h"
+   635 ;; Parameters:    Size  Location     Type
+   636 ;;		None
+   637 ;; Auto vars:     Size  Location     Type
+   638 ;;		None
+   639 ;; Return value:  Size  Location     Type
+   640 ;;                  1    wreg      void 
+   641 ;; Registers used:
+   642 ;;		wreg, status,2
+   643 ;; Tracked objects:
+   644 ;;		On entry : 0/0
+   645 ;;		On exit  : 0/0
+   646 ;;		Unchanged: 0/0
+   647 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   648 ;;      Params:         0       0       0       0       0
+   649 ;;      Locals:         0       0       0       0       0
+   650 ;;      Temps:          0       0       0       0       0
+   651 ;;      Totals:         0       0       0       0       0
+   652 ;;Total ram usage:        0 bytes
+   653 ;; Hardware stack levels used:    1
+   654 ;; This function calls:
+   655 ;;		Nothing
+   656 ;; This function is called by:
+   657 ;;		_main
+   658 ;; This function uses a non-reentrant model
+   659 ;;
+   660                           
+   661                           
+   662                           ;psect for function _serialInit
+   663  0632                     _serialInit:	
+   664                           
+   665                           ;Serial.h: 2: TRISC = 1 << 7;
+   666                           
+   667                           ;incstack = 0
+   668                           ; Regs used in _serialInit: [wreg+status,2]
+   669  0632  3080               	movlw	128
+   670  0633  1683               	bsf	3,5	;RP0=1, select bank1
+   671  0634  1303               	bcf	3,6	;RP1=0, select bank1
+   672  0635  0087               	movwf	7	;volatile
+   673                           
+   674                           ;Serial.h: 3: PORTC = 0x00;
+   675  0636  1283               	bcf	3,5	;RP0=0, select bank0
+   676  0637  1303               	bcf	3,6	;RP1=0, select bank0
+   677  0638  0187               	clrf	7	;volatile
+   678                           
+   679                           ;Serial.h: 4: TXSTA = 0x24;
+   680  0639  3024               	movlw	36
+   681  063A  1683               	bsf	3,5	;RP0=1, select bank1
+   682  063B  1303               	bcf	3,6	;RP1=0, select bank1
+   683  063C  0098               	movwf	24	;volatile
+   684                           
+   685                           ;Serial.h: 5: RCSTA = 0x90;
+   686  063D  3090               	movlw	144
+   687  063E  1283               	bcf	3,5	;RP0=0, select bank0
+   688  063F  1303               	bcf	3,6	;RP1=0, select bank0
+   689  0640  0098               	movwf	24	;volatile
+   690                           
+   691                           ;Serial.h: 6: SPBRG = 25;
+   692  0641  3019               	movlw	25
+   693  0642  1683               	bsf	3,5	;RP0=1, select bank1
+   694  0643  1303               	bcf	3,6	;RP1=0, select bank1
+   695  0644  0099               	movwf	25	;volatile
+   696  0645  0008               	return
+   697  0646                     __end_of_serialInit:	
+   698                           
+   699                           	psect	text4
+   700  0662                     __ptext4:	
+   701 ;; *************** function _accessGranted *****************
+   702 ;; Defined at:
+   703 ;;		line 20 in file "main.c"
+   704 ;; Parameters:    Size  Location     Type
+   705 ;;		None
+   706 ;; Auto vars:     Size  Location     Type
+   707 ;;		None
+   708 ;; Return value:  Size  Location     Type
+   709 ;;                  1    wreg      void 
+   710 ;; Registers used:
+   711 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   712 ;; Tracked objects:
+   713 ;;		On entry : 0/0
+   714 ;;		On exit  : 0/0
+   715 ;;		Unchanged: 0/0
+   716 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   717 ;;      Params:         0       0       0       0       0
+   718 ;;      Locals:         0       0       0       0       0
+   719 ;;      Temps:          2       0       0       0       0
+   720 ;;      Totals:         2       0       0       0       0
+   721 ;;Total ram usage:        2 bytes
+   722 ;; Hardware stack levels used:    1
+   723 ;; Hardware stack levels required when called:    2
+   724 ;; This function calls:
+   725 ;;		_LCD_Print
+   726 ;;		_command
+   727 ;; This function is called by:
+   728 ;;		_main
+   729 ;; This function uses a non-reentrant model
+   730 ;;
+   731                           
+   732                           
+   733                           ;psect for function _accessGranted
+   734  0662                     _accessGranted:	
+   735                           
+   736                           ;main.c: 21: RC2 = 1;
+   737                           
+   738                           ;incstack = 0
+   739                           ; Regs used in _accessGranted: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   740  0662  1283               	bcf	3,5	;RP0=0, select bank0
+   741  0663  1303               	bcf	3,6	;RP1=0, select bank0
+   742  0664  1507               	bsf	7,2	;volatile
+   743                           
+   744                           ;main.c: 22: _delay((unsigned long)((20)*(4e6/4000.0)));
+   745  0665  301A               	movlw	26
+   746  0666  00F6               	movwf	??_accessGranted+1
+   747  0667  30F8               	movlw	248
+   748  0668  00F5               	movwf	??_accessGranted
+   749  0669                     u207:	
+   750  0669  0BF5               	decfsz	??_accessGranted,f
+   751  066A  2E69               	goto	u207
+   752  066B  0BF6               	decfsz	??_accessGranted+1,f
+   753  066C  2E69               	goto	u207
+   754  066D  0000               	nop
+   755                           
+   756                           ;main.c: 23: RC2 = 0;
+   757  066E  1283               	bcf	3,5	;RP0=0, select bank0
+   758  066F  1303               	bcf	3,6	;RP1=0, select bank0
+   759  0670  1107               	bcf	7,2	;volatile
+   760                           
+   761                           ;main.c: 24: RC1 = 1;
+   762  0671  1487               	bsf	7,1	;volatile
+   763                           
+   764                           ;main.c: 25: RC0 = 0;
+   765  0672  1007               	bcf	7,0	;volatile
+   766                           
+   767                           ;main.c: 26: command(0xC0);
+   768  0673  30C0               	movlw	192
+   769  0674  120A  118A  26E8  120A  118A  	fcall	_command
+   770                           
+   771                           ;main.c: 27: LCD_Print("Granted!");
+   772  0679  300B               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
+   773  067A  120A  118A  2646   	fcall	_LCD_Print
+   774  067D  0008               	return
+   775  067E                     __end_of_accessGranted:	
+   776                           
+   777                           	psect	text5
+   778  067E                     __ptext5:	
+   779 ;; *************** function _accessDenied *****************
+   780 ;; Defined at:
+   781 ;;		line 30 in file "main.c"
+   782 ;; Parameters:    Size  Location     Type
+   783 ;;		None
+   784 ;; Auto vars:     Size  Location     Type
+   785 ;;		None
+   786 ;; Return value:  Size  Location     Type
+   787 ;;                  1    wreg      void 
+   788 ;; Registers used:
+   789 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   790 ;; Tracked objects:
+   791 ;;		On entry : 0/0
+   792 ;;		On exit  : 0/0
+   793 ;;		Unchanged: 0/0
+   794 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   795 ;;      Params:         0       0       0       0       0
+   796 ;;      Locals:         0       0       0       0       0
+   797 ;;      Temps:          3       0       0       0       0
+   798 ;;      Totals:         3       0       0       0       0
+   799 ;;Total ram usage:        3 bytes
+   800 ;; Hardware stack levels used:    1
+   801 ;; Hardware stack levels required when called:    2
+   802 ;; This function calls:
+   803 ;;		_LCD_Print
+   804 ;;		_command
+   805 ;; This function is called by:
+   806 ;;		_main
+   807 ;; This function uses a non-reentrant model
+   808 ;;
+   809                           
+   810                           
+   811                           ;psect for function _accessDenied
+   812  067E                     _accessDenied:	
+   813                           
+   814                           ;main.c: 31: command(0xC0);
+   815                           
+   816                           ;incstack = 0
+   817                           ; Regs used in _accessDenied: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   818  067E  30C0               	movlw	192
+   819  067F  120A  118A  26E8  120A  118A  	fcall	_command
+   820                           
+   821                           ;main.c: 32: LCD_Print("Denied..");
+   822  0684  3014               	movlw	(low ((STR_2-__stringbase)| (0+32768)))& (0+255)
+   823  0685  120A  118A  2646  120A  118A  	fcall	_LCD_Print
+   824                           
+   825                           ;main.c: 33: RC2 = 1;
+   826  068A  1283               	bcf	3,5	;RP0=0, select bank0
+   827  068B  1303               	bcf	3,6	;RP1=0, select bank0
+   828  068C  1507               	bsf	7,2	;volatile
+   829                           
+   830                           ;main.c: 34: RC0 = 1;
+   831  068D  1407               	bsf	7,0	;volatile
+   832                           
+   833                           ;main.c: 35: _delay((unsigned long)((500)*(4e6/4000.0)));
+   834  068E  3003               	movlw	3
+   835  068F  00F7               	movwf	??_accessDenied+2
+   836  0690  308A               	movlw	138
+   837  0691  00F6               	movwf	??_accessDenied+1
+   838  0692  3056               	movlw	86
+   839  0693  00F5               	movwf	??_accessDenied
+   840  0694                     u217:	
+   841  0694  0BF5               	decfsz	??_accessDenied,f
+   842  0695  2E94               	goto	u217
+   843  0696  0BF6               	decfsz	??_accessDenied+1,f
+   844  0697  2E94               	goto	u217
+   845  0698  0BF7               	decfsz	??_accessDenied+2,f
+   846  0699  2E94               	goto	u217
+   847  069A  2E9B               	nop2
+   848                           
+   849                           ;main.c: 36: RC2 = 0;
+   850  069B  1283               	bcf	3,5	;RP0=0, select bank0
+   851  069C  1303               	bcf	3,6	;RP1=0, select bank0
+   852  069D  1107               	bcf	7,2	;volatile
+   853                           
+   854                           ;main.c: 37: RC1 = 0;
+   855  069E  1087               	bcf	7,1	;volatile
+   856  069F  0008               	return
+   857  06A0                     __end_of_accessDenied:	
+   858                           
+   859                           	psect	text6
+   860  0646                     __ptext6:	
+   861 ;; *************** function _LCD_Print *****************
+   862 ;; Defined at:
+   863 ;;		line 37 in file "LiquidCrystal.h"
+   864 ;; Parameters:    Size  Location     Type
+   865 ;;  str             1    wreg     PTR unsigned char 
+   866 ;;		 -> STR_3(10), STR_2(9), STR_1(9), 
+   867 ;; Auto vars:     Size  Location     Type
+   868 ;;  str             1    4[COMMON] PTR unsigned char 
+   869 ;;		 -> STR_3(10), STR_2(9), STR_1(9), 
+   870 ;; Return value:  Size  Location     Type
+   871 ;;                  1    wreg      void 
+   872 ;; Registers used:
+   873 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   874 ;; Tracked objects:
+   875 ;;		On entry : 0/0
+   876 ;;		On exit  : 0/0
+   877 ;;		Unchanged: 0/0
+   878 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   879 ;;      Params:         0       0       0       0       0
+   880 ;;      Locals:         1       0       0       0       0
+   881 ;;      Temps:          1       0       0       0       0
+   882 ;;      Totals:         2       0       0       0       0
+   883 ;;Total ram usage:        2 bytes
+   884 ;; Hardware stack levels used:    1
+   885 ;; Hardware stack levels required when called:    1
+   886 ;; This function calls:
+   887 ;;		_data
+   888 ;; This function is called by:
+   889 ;;		_accessGranted
+   890 ;;		_accessDenied
+   891 ;;		_main
+   892 ;; This function uses a non-reentrant model
+   893 ;;
+   894                           
+   895                           
+   896                           ;psect for function _LCD_Print
+   897  0646                     _LCD_Print:	
+   898                           
+   899                           ;incstack = 0
+   900                           ; Regs used in _LCD_Print: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   901                           ;LCD_Print@str stored from wreg
+   902  0646  00F4               	movwf	LCD_Print@str
+   903  0647                     l757:	
+   904                           ;LiquidCrystal.h: 38: while(*str) {
+   905                           
+   906  0647  0874               	movf	LCD_Print@str,w
+   907  0648  0084               	movwf	4
+   908  0649  120A  118A  2003  120A  118A  	fcall	stringdir
+   909  064E  3A00               	xorlw	0
+   910  064F  1903               	btfsc	3,2
+   911  0650  0008               	return
+   912                           
+   913                           ;LiquidCrystal.h: 39: data(*str);
+   914  0651  0874               	movf	LCD_Print@str,w
+   915  0652  0084               	movwf	4
+   916  0653  120A  118A  2003  120A  118A  	fcall	stringdir
+   917  0658  120A  118A  2717  120A  118A  	fcall	_data
+   918                           
+   919                           ;LiquidCrystal.h: 40: str++;
+   920  065D  3001               	movlw	1
+   921  065E  00F3               	movwf	??_LCD_Print
+   922  065F  0873               	movf	??_LCD_Print,w
+   923  0660  07F4               	addwf	LCD_Print@str,f
+   924  0661  2E47               	goto	l757
+   925  0662                     __end_of_LCD_Print:	
+   926                           
+   927                           	psect	text7
+   928  0717                     __ptext7:	
+   929 ;; *************** function _data *****************
+   930 ;; Defined at:
+   931 ;;		line 21 in file "LiquidCrystal.h"
+   932 ;; Parameters:    Size  Location     Type
+   933 ;;  ch              1    wreg     unsigned char 
+   934 ;; Auto vars:     Size  Location     Type
+   935 ;;  ch              1    2[COMMON] unsigned char 
+   936 ;; Return value:  Size  Location     Type
+   937 ;;                  1    wreg      void 
+   938 ;; Registers used:
+   939 ;;		wreg, status,2, status,0
+   940 ;; Tracked objects:
+   941 ;;		On entry : 0/0
+   942 ;;		On exit  : 0/0
+   943 ;;		Unchanged: 0/0
+   944 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   945 ;;      Params:         0       0       0       0       0
+   946 ;;      Locals:         1       0       0       0       0
+   947 ;;      Temps:          2       0       0       0       0
+   948 ;;      Totals:         3       0       0       0       0
+   949 ;;Total ram usage:        3 bytes
+   950 ;; Hardware stack levels used:    1
+   951 ;; This function calls:
+   952 ;;		Nothing
+   953 ;; This function is called by:
+   954 ;;		_LCD_Print
+   955 ;; This function uses a non-reentrant model
+   956 ;;
+   957                           
+   958                           
+   959                           ;psect for function _data
+   960  0717                     _data:	
+   961                           
+   962                           ;incstack = 0
+   963                           ; Regs used in _data: [wreg+status,2+status,0]
+   964                           ;data@ch stored from wreg
+   965  0717  00F2               	movwf	data@ch
+   966                           
+   967                           ;LiquidCrystal.h: 22: PORTB = (ch & 0xF0);
+   968  0718  0872               	movf	data@ch,w
+   969  0719  39F0               	andlw	240
+   970  071A  1283               	bcf	3,5	;RP0=0, select bank0
+   971  071B  1303               	bcf	3,6	;RP1=0, select bank0
+   972  071C  0086               	movwf	6	;volatile
+   973                           
+   974                           ;LiquidCrystal.h: 23: RB0 = 1;
+   975  071D  1406               	bsf	6,0	;volatile
+   976                           
+   977                           ;LiquidCrystal.h: 24: RB1 = 0;
+   978  071E  1086               	bcf	6,1	;volatile
+   979                           
+   980                           ;LiquidCrystal.h: 25: RB2 = 1;
+   981  071F  1506               	bsf	6,2	;volatile
+   982                           
+   983                           ;LiquidCrystal.h: 26: _delay((unsigned long)((5)*(4e6/4000.0)));
+   984  0720  3007               	movlw	7
+   985  0721  00F1               	movwf	??_data+1
+   986  0722  307D               	movlw	125
+   987  0723  00F0               	movwf	??_data
+   988  0724                     u227:	
+   989  0724  0BF0               	decfsz	??_data,f
+   990  0725  2F24               	goto	u227
+   991  0726  0BF1               	decfsz	??_data+1,f
+   992  0727  2F24               	goto	u227
+   993                           
+   994                           ;LiquidCrystal.h: 27: RB2 = 0;
+   995  0728  1283               	bcf	3,5	;RP0=0, select bank0
+   996  0729  1303               	bcf	3,6	;RP1=0, select bank0
+   997  072A  1106               	bcf	6,2	;volatile
+   998                           
+   999                           ;LiquidCrystal.h: 29: PORTB = ((ch << 4) & 0xF0);
+  1000  072B  0872               	movf	data@ch,w
+  1001  072C  00F0               	movwf	??_data
+  1002  072D  3003               	movlw	3
+  1003  072E                     u105:	
+  1004  072E  1003               	clrc
+  1005  072F  0DF0               	rlf	??_data,f
+  1006  0730  3EFF               	addlw	-1
+  1007  0731  1D03               	skipz
+  1008  0732  2F2E               	goto	u105
+  1009  0733  1003               	clrc
+  1010  0734  0D70               	rlf	??_data,w
+  1011  0735  39F0               	andlw	240
+  1012  0736  0086               	movwf	6	;volatile
+  1013                           
+  1014                           ;LiquidCrystal.h: 30: RB0 = 1;
+  1015  0737  1406               	bsf	6,0	;volatile
+  1016                           
+  1017                           ;LiquidCrystal.h: 31: RB1 = 0;
+  1018  0738  1086               	bcf	6,1	;volatile
+  1019                           
+  1020                           ;LiquidCrystal.h: 32: RB2 = 1;
+  1021  0739  1506               	bsf	6,2	;volatile
+  1022                           
+  1023                           ;LiquidCrystal.h: 33: _delay((unsigned long)((5)*(4e6/4000.0)));
+  1024  073A  3007               	movlw	7
+  1025  073B  00F1               	movwf	??_data+1
+  1026  073C  307D               	movlw	125
+  1027  073D  00F0               	movwf	??_data
+  1028  073E                     u237:	
+  1029  073E  0BF0               	decfsz	??_data,f
+  1030  073F  2F3E               	goto	u237
+  1031  0740  0BF1               	decfsz	??_data+1,f
+  1032  0741  2F3E               	goto	u237
+  1033                           
+  1034                           ;LiquidCrystal.h: 34: RB2 = 0;
+  1035  0742  1283               	bcf	3,5	;RP0=0, select bank0
+  1036  0743  1303               	bcf	3,6	;RP1=0, select bank0
+  1037  0744  1106               	bcf	6,2	;volatile
+  1038  0745  0008               	return
+  1039  0746                     __end_of_data:	
+  1040                           
+  1041                           	psect	text8
+  1042  06A0                     __ptext8:	
+  1043 ;; *************** function _LCD_Init *****************
+  1044 ;; Defined at:
+  1045 ;;		line 44 in file "LiquidCrystal.h"
+  1046 ;; Parameters:    Size  Location     Type
+  1047 ;;		None
+  1048 ;; Auto vars:     Size  Location     Type
+  1049 ;;		None
+  1050 ;; Return value:  Size  Location     Type
+  1051 ;;                  1    wreg      void 
+  1052 ;; Registers used:
+  1053 ;;		wreg, status,2, status,0, pclath, cstack
+  1054 ;; Tracked objects:
+  1055 ;;		On entry : 0/0
+  1056 ;;		On exit  : 0/0
+  1057 ;;		Unchanged: 0/0
+  1058 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1059 ;;      Params:         0       0       0       0       0
+  1060 ;;      Locals:         0       0       0       0       0
+  1061 ;;      Temps:          0       0       0       0       0
+  1062 ;;      Totals:         0       0       0       0       0
+  1063 ;;Total ram usage:        0 bytes
+  1064 ;; Hardware stack levels used:    1
+  1065 ;; Hardware stack levels required when called:    1
+  1066 ;; This function calls:
+  1067 ;;		_command
+  1068 ;; This function is called by:
+  1069 ;;		_main
+  1070 ;; This function uses a non-reentrant model
+  1071 ;;
+  1072                           
+  1073                           
+  1074                           ;psect for function _LCD_Init
+  1075  06A0                     _LCD_Init:	
+  1076                           
+  1077                           ;LiquidCrystal.h: 45: TRISB = 0x00;
+  1078                           
+  1079                           ;incstack = 0
+  1080                           ; Regs used in _LCD_Init: [wreg+status,2+status,0+pclath+cstack]
+  1081  06A0  1683               	bsf	3,5	;RP0=1, select bank1
+  1082  06A1  1303               	bcf	3,6	;RP1=0, select bank1
+  1083  06A2  0186               	clrf	6	;volatile
+  1084                           
+  1085                           ;LiquidCrystal.h: 46: PORTB = 0x00;
+  1086  06A3  1283               	bcf	3,5	;RP0=0, select bank0
+  1087  06A4  1303               	bcf	3,6	;RP1=0, select bank0
+  1088  06A5  0186               	clrf	6	;volatile
+  1089                           
+  1090                           ;LiquidCrystal.h: 47: command(0x02);
+  1091  06A6  3002               	movlw	2
+  1092  06A7  120A  118A  26E8  120A  118A  	fcall	_command
+  1093                           
+  1094                           ;LiquidCrystal.h: 48: command(0x28);
+  1095  06AC  3028               	movlw	40
+  1096  06AD  120A  118A  26E8  120A  118A  	fcall	_command
+  1097                           
+  1098                           ;LiquidCrystal.h: 49: command(0x0C);
+  1099  06B2  300C               	movlw	12
+  1100  06B3  120A  118A  26E8  120A  118A  	fcall	_command
+  1101                           
+  1102                           ;LiquidCrystal.h: 50: command(0x01);
+  1103  06B8  3001               	movlw	1
+  1104  06B9  120A  118A  26E8  120A  118A  	fcall	_command
+  1105                           
+  1106                           ;LiquidCrystal.h: 51: command(0x80);
+  1107  06BE  3080               	movlw	128
+  1108  06BF  120A  118A  26E8   	fcall	_command
+  1109  06C2  0008               	return
+  1110  06C3                     __end_of_LCD_Init:	
+  1111                           
+  1112                           	psect	text9
+  1113  06E8                     __ptext9:	
+  1114 ;; *************** function _command *****************
+  1115 ;; Defined at:
+  1116 ;;		line 5 in file "LiquidCrystal.h"
+  1117 ;; Parameters:    Size  Location     Type
+  1118 ;;  cmd             1    wreg     unsigned char 
+  1119 ;; Auto vars:     Size  Location     Type
+  1120 ;;  cmd             1    2[COMMON] unsigned char 
+  1121 ;; Return value:  Size  Location     Type
+  1122 ;;                  1    wreg      void 
+  1123 ;; Registers used:
+  1124 ;;		wreg, status,2, status,0
+  1125 ;; Tracked objects:
+  1126 ;;		On entry : 0/0
+  1127 ;;		On exit  : 0/0
+  1128 ;;		Unchanged: 0/0
+  1129 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1130 ;;      Params:         0       0       0       0       0
+  1131 ;;      Locals:         1       0       0       0       0
+  1132 ;;      Temps:          2       0       0       0       0
+  1133 ;;      Totals:         3       0       0       0       0
+  1134 ;;Total ram usage:        3 bytes
+  1135 ;; Hardware stack levels used:    1
+  1136 ;; This function calls:
+  1137 ;;		Nothing
+  1138 ;; This function is called by:
+  1139 ;;		_LCD_Init
+  1140 ;;		_accessGranted
+  1141 ;;		_accessDenied
+  1142 ;;		_main
+  1143 ;; This function uses a non-reentrant model
+  1144 ;;
+  1145                           
+  1146                           
+  1147                           ;psect for function _command
+  1148  06E8                     _command:	
+  1149                           
+  1150                           ;incstack = 0
+  1151                           ; Regs used in _command: [wreg+status,2+status,0]
+  1152                           ;command@cmd stored from wreg
+  1153  06E8  00F2               	movwf	command@cmd
+  1154                           
+  1155                           ;LiquidCrystal.h: 6: PORTB = (cmd & 0xF0);
+  1156  06E9  0872               	movf	command@cmd,w
+  1157  06EA  39F0               	andlw	240
+  1158  06EB  1283               	bcf	3,5	;RP0=0, select bank0
+  1159  06EC  1303               	bcf	3,6	;RP1=0, select bank0
+  1160  06ED  0086               	movwf	6	;volatile
+  1161                           
+  1162                           ;LiquidCrystal.h: 7: RB0 = 0;
+  1163  06EE  1006               	bcf	6,0	;volatile
+  1164                           
+  1165                           ;LiquidCrystal.h: 8: RB1 = 0;
+  1166  06EF  1086               	bcf	6,1	;volatile
+  1167                           
+  1168                           ;LiquidCrystal.h: 9: RB2 = 1;
+  1169  06F0  1506               	bsf	6,2	;volatile
+  1170                           
+  1171                           ;LiquidCrystal.h: 10: _delay((unsigned long)((5)*(4e6/4000.0)));
+  1172  06F1  3007               	movlw	7
+  1173  06F2  00F1               	movwf	??_command+1
+  1174  06F3  307D               	movlw	125
+  1175  06F4  00F0               	movwf	??_command
+  1176  06F5                     u247:	
+  1177  06F5  0BF0               	decfsz	??_command,f
+  1178  06F6  2EF5               	goto	u247
+  1179  06F7  0BF1               	decfsz	??_command+1,f
+  1180  06F8  2EF5               	goto	u247
+  1181                           
+  1182                           ;LiquidCrystal.h: 11: RB2 = 0;
+  1183  06F9  1283               	bcf	3,5	;RP0=0, select bank0
+  1184  06FA  1303               	bcf	3,6	;RP1=0, select bank0
+  1185  06FB  1106               	bcf	6,2	;volatile
+  1186                           
+  1187                           ;LiquidCrystal.h: 13: PORTB = ((cmd << 4) & 0xF0);
+  1188  06FC  0872               	movf	command@cmd,w
+  1189  06FD  00F0               	movwf	??_command
+  1190  06FE  3003               	movlw	3
+  1191  06FF                     u115:	
+  1192  06FF  1003               	clrc
+  1193  0700  0DF0               	rlf	??_command,f
+  1194  0701  3EFF               	addlw	-1
+  1195  0702  1D03               	skipz
+  1196  0703  2EFF               	goto	u115
+  1197  0704  1003               	clrc
+  1198  0705  0D70               	rlf	??_command,w
+  1199  0706  39F0               	andlw	240
+  1200  0707  0086               	movwf	6	;volatile
+  1201                           
+  1202                           ;LiquidCrystal.h: 14: RB0 = 0;
+  1203  0708  1006               	bcf	6,0	;volatile
+  1204                           
+  1205                           ;LiquidCrystal.h: 15: RB1 = 0;
+  1206  0709  1086               	bcf	6,1	;volatile
+  1207                           
+  1208                           ;LiquidCrystal.h: 16: RB2 = 1;
+  1209  070A  1506               	bsf	6,2	;volatile
+  1210                           
+  1211                           ;LiquidCrystal.h: 17: _delay((unsigned long)((5)*(4e6/4000.0)));
+  1212  070B  3007               	movlw	7
+  1213  070C  00F1               	movwf	??_command+1
+  1214  070D  307D               	movlw	125
+  1215  070E  00F0               	movwf	??_command
+  1216  070F                     u257:	
+  1217  070F  0BF0               	decfsz	??_command,f
+  1218  0710  2F0F               	goto	u257
+  1219  0711  0BF1               	decfsz	??_command+1,f
+  1220  0712  2F0F               	goto	u257
+  1221                           
+  1222                           ;LiquidCrystal.h: 18: RB2 = 0;
+  1223  0713  1283               	bcf	3,5	;RP0=0, select bank0
+  1224  0714  1303               	bcf	3,6	;RP1=0, select bank0
+  1225  0715  1106               	bcf	6,2	;volatile
+  1226  0716  0008               	return
+  1227  0717                     __end_of_command:	
+  1228  007E                     btemp	set	126	;btemp
+  1229  007E                     wtemp	set	126
+  1230  007E                     wtemp0	set	126
+  1231  0080                     wtemp1	set	128
+  1232  0082                     wtemp2	set	130
+  1233  0084                     wtemp3	set	132
+  1234  0086                     wtemp4	set	134
+  1235  0088                     wtemp5	set	136
+  1236  007F                     wtemp6	set	127
+  1237  007E                     ttemp	set	126
+  1238  007E                     ttemp0	set	126
+  1239  0081                     ttemp1	set	129
+  1240  0084                     ttemp2	set	132
+  1241  0087                     ttemp3	set	135
+  1242  007F                     ttemp4	set	127
+  1243  007E                     ltemp	set	126
+  1244  007E                     ltemp0	set	126
+  1245  0082                     ltemp1	set	130
+  1246  0086                     ltemp2	set	134
+  1247  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     28
+    Constant    0
+    Data        6
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14     11      11
+    BANK0            80     26      32
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    strcmp@s2	PTR const unsigned char  size(1) Largest target is 20
+		 -> main@UID_In(BANK0[20]), 
+
+    strcmp@s1	PTR const unsigned char  size(1) Largest target is 6
+		 -> main@UID(BANK0[6]), 
+
+    LCD_Print@str	PTR unsigned char  size(1) Largest target is 10
+		 -> STR_3(CODE[10]), STR_2(CODE[9]), STR_1(CODE[9]), 
+
+    serialRead@str	PTR unsigned char  size(1) Largest target is 20
+		 -> main@UID_In(BANK0[20]), 
+
+
+Critical Paths under _main in COMMON
+
+    _main->_accessDenied
+    _accessGranted->_LCD_Print
+    _accessDenied->_LCD_Print
+    _LCD_Print->_data
+    _LCD_Init->_command
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                29    29      0    1138
+                                              8 COMMON     3     3      0
+                                              0 BANK0     26    26      0
+                           _LCD_Init
+                          _LCD_Print
+                       _accessDenied
+                      _accessGranted
+                            _command
+                         _serialInit
+                         _serialRead
+                             _strcmp
+ ---------------------------------------------------------------------------------
+ (1) _strcmp                                               6     4      2     171
+                                              0 COMMON     6     4      2
+ ---------------------------------------------------------------------------------
+ (1) _serialRead                                           5     5      0     205
+                                              0 COMMON     5     5      0
+ ---------------------------------------------------------------------------------
+ (1) _serialInit                                           0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _accessGranted                                        2     2      0     214
+                                              5 COMMON     2     2      0
+                          _LCD_Print
+                            _command
+ ---------------------------------------------------------------------------------
+ (1) _accessDenied                                         3     3      0     214
+                                              5 COMMON     3     3      0
+                          _LCD_Print
+                            _command
+ ---------------------------------------------------------------------------------
+ (2) _LCD_Print                                            2     2      0     170
+                                              3 COMMON     2     2      0
+                               _data
+ ---------------------------------------------------------------------------------
+ (3) _data                                                 3     3      0      44
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _LCD_Init                                             0     0      0      44
+                            _command
+ ---------------------------------------------------------------------------------
+ (1) _command                                              3     3      0      44
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _LCD_Init
+     _command
+   _LCD_Print
+     _data
+   _accessDenied
+     _LCD_Print
+       _data
+     _command
+   _accessGranted
+     _LCD_Print
+       _data
+     _command
+   _command
+   _serialInit
+   _serialRead
+   _strcmp
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BANK3               60      0       0       9        0.0%
+BITBANK3            60      0       0       8        0.0%
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+BANK2               60      0       0      11        0.0%
+BITBANK2            60      0       0      10        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK1            50      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50     1A      20       5       40.0%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      B       B       1       78.6%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      2B      12        0.0%
+ABS                  0      0      2B       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.36 build -262312587 
+Symbol Table                                                                                   Fri Nov 08 11:23:43 2024
+
+                      pc 0002              __CFG_CP$OFF 0000                       l41 0749  
+                     fsr 0004                      l821 06C5                      l825 06CD  
+                    l851 07C2                      l757 0647                      l829 06E2  
+                    l775 0769                      l839 0797                      l777 0770  
+                    l849 07BD                      _RB0 0030                      _RB1 0031  
+                    _RC0 0038                      _RB2 0032                      _RC1 0039  
+                    _RC2 003A                      u105 072E                      u115 06FF  
+                    u207 0669                      u217 0694                      u227 0724  
+                    u237 073E                      u247 06F5                      u257 070F  
+           __CFG_CPD$OFF 0000                      u197 07C8                      fsr0 0004  
+                    indf 0000             __CFG_FOSC$XT 0000             __CFG_LVP$OFF 0000  
+                   STR_1 0013                     STR_2 001C                     STR_3 0009  
+                   _RCIF 0065             __CFG_WRT$OFF 0000                     _data 0717  
+                   _main 0777                     btemp 007E                     ltemp 007E  
+     __size_of_LCD_Print 001C                     start 0000                     ttemp 007E  
+                   wtemp 007E    __size_of_accessDenied 0022         __end_of_LCD_Init 06C3  
+                  ?_data 0070                    ?_main 0070            __CFG_WDTE$OFF 0000  
+                  _RCREG 001A                    _RCSTA 0018                    _SPBRG 0099  
+                  _PORTB 0006                    _PORTC 0007                    _TRISB 0086  
+                  _TRISC 0087                    _TXSTA 0098          __end_of_command 0717  
+         __CFG_BOREN$OFF 0000                    pclath 000A             _accessDenied 067E  
+                  ltemp0 007E                    ltemp1 0082                    ltemp2 0086  
+                  ltemp3 0080                    ttemp0 007E                    ttemp1 0081  
+                  ttemp2 0084                    ttemp3 0087                    ttemp4 007F  
+                  status 0003                    wtemp0 007E                    wtemp1 0080  
+                  wtemp2 0082                    wtemp3 0084                    wtemp4 0086  
+                  wtemp5 0088                    wtemp6 007F          __initialization 07DA  
+ __size_of_accessGranted 001C             __end_of_data 0746             __end_of_main 07DA  
+                 ??_data 0070                   ??_main 0078        __end_of_LCD_Print 0662  
+           LCD_Print@str 0074           __CFG_PWRTE$OFF 0000                   data@ch 0072  
+                 _strcmp 06C3                ??_command 0070            _accessGranted 0662  
+__end_of__initialization 07FC                ?_LCD_Init 0070           __pcstackCOMMON 0070  
+           __pidataBANK0 062C           ?_accessGranted 0070               ??_LCD_Init 0073  
+             __pmaintext 0777                  ?_strcmp 0070               __stringtab 0003  
+                __ptext1 06C3                  __ptext2 0746                  __ptext3 0632  
+                __ptext4 0662                  __ptext5 067E                  __ptext6 0646  
+                __ptext7 0717                  __ptext8 06A0                  __ptext9 06E8  
+                _command 06E8          __size_of_strcmp 0025          ??_accessGranted 0075  
+            serialRead@i 0072                  main@UID 0034                _LCD_Print 0646  
+   end_of_initialization 07FC               _serialInit 0632               _serialRead 0746  
+                strcmp@r 0074               main@UID_In 0020               ?_LCD_Print 0070  
+             command@cmd 0072        __size_of_LCD_Init 0023           __end_of_strcmp 06E8  
+    start_initialization 07DA              ?_serialInit 0070              ?_serialRead 0070  
+            __pdataBANK0 003A                 ??_strcmp 0072                ___latbits 0002  
+          __pcstackBANK0 0020              ??_LCD_Print 0073            ?_accessDenied 0070  
+              __pstrings 0003                 ?_command 0070      __size_of_serialInit 0014  
+    __size_of_serialRead 0031           ??_accessDenied 0075            serialRead@str 0074  
+               _LCD_Init 06A0                main@F1092 003A              __stringbase 0008  
+  __end_of_accessGranted 067E       __end_of__stringtab 0009         __size_of_command 002F  
+          __size_of_data 002F            __size_of_main 0063             ??_serialInit 0070  
+           ??_serialRead 0070     __end_of_accessDenied 06A0       __end_of_serialInit 0646  
+     __end_of_serialRead 0777                stringcode 0003                 strcmp@s1 0075  
+               strcmp@s2 0070                 stringdir 0003                 stringtab 0003  
